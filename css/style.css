@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #1b7a3e;
+  color: #fff;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.search {
+  padding: 0.5rem;
+  width: 300px;
+  max-width: 100%;
+}
+
+.profile {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: #fff;
+  color: #1b7a3e;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.dash-wrapper {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #1f2a24;
+  padding: 1rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem;
+}
+
+.logout {
+  margin-top: auto;
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+.dash-content {
+  padding: 1rem;
+  min-width: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.body-split {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.body-split h2 {
+  margin-bottom: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #ddd;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.dash-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #1f2a24;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .dash-header {
+    flex-direction: column;
+  }
+
+  .dash-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .body-split {
+    grid-template-columns: 1fr;
+  }
+}
